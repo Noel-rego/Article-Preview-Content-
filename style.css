@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing:border-box;
+}
+.main-box{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+.bigImg{
+    height:100px;
+    width:100px;
+    background-color: aqua;
+}
+.main-Body{
+    height:100px;
+    width:100px;
+    background-color: aqua;
+
+}
