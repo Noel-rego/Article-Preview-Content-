@@ -53,7 +53,7 @@
 
 }
 
-img{
+.profile{
     height:30px;
     width: 30px;
     border-radius: 50px;
@@ -95,7 +95,7 @@ button{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:250px;
+    width:200px;
     bottom:40px;
     left: 50%; 
     transform: translateX(-50%);/*not exactly sure what it does*/
@@ -108,7 +108,8 @@ button{
     background-color:hsl(217, 19%, 35%);
     align-items: center;
     border-radius: 10px;
-    padding: 12px 16px; 
+    padding-top: 7px; 
+    padding-bottom: 5px;
     width:100%;
 
    
