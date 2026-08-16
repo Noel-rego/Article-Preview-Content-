@@ -60,7 +60,10 @@ img{
     color:hsl(217, 19%, 35%);
 }
 button{
-    background-color:hsl(210, 46%, 95%) ;   ;
-    color:hsl(212, 23%, 69%);;
-    border-radius: 20px;
+    background-color:hsl(210, 46%, 95%) ;   
+    color:hsl(217, 19%, 35%);;
+    height:25px;
+    border:2px solid hsl(210, 46%, 95%);
+    width:30px;
+    border-radius:20px;
 }
