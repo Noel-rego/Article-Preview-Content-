@@ -71,6 +71,14 @@ img{
     font-size: 12px;
 
 }
+
+.share{
+         display: flex;
+         flex-direction: column;
+         position: relative; 
+         justify-content: center;
+         align-items: center;  
+}
 button{
     background-color:hsl(210, 46%, 95%) ;   
     color:hsl(217, 19%, 35%);
@@ -79,31 +87,41 @@ button{
     width:30px;
     border-radius:20px;
 }
-.share{
-         display: flex;
-         flex-direction: column;
-         position: relative; 
-         justify-content: center;
-}
-.popup-arrow {
-    width: 10px;
-    height: 10px;
-    background-color: hsl(217, 19%, 35%); 
-    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-   
-}
+
 .invisibleButtons{
-    /*display:none;*/
+    display: flex;
+    display:none;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:250px;
+    bottom:40px;
+    left: 50%; 
+    transform: translateX(-50%);/*not exactly sure what it does*/
+    z-index: 10; 
 }
 .invisibleButton{
     display: flex;
     justify-content: space-evenly;
     object-fit: contain;
-    background-color:hsl(217, 19%, 35%) ;
+    background-color:hsl(217, 19%, 35%);
+    align-items: center;
     border-radius: 10px;
-    
+    padding: 12px 16px; 
+    width:100%;
+
+   
 }
 .share-text{
     color:hsl(212, 23%, 69%);
     font-size:12px;
+}
+.popup-arrow {
+    width: 12px;
+    height: 6px;
+    margin-top: -1px; 
+    background-color: hsl(217, 19%, 35%); 
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+   
 }
