@@ -44,12 +44,12 @@
     font-size: 13px;
     font-weight :500;
     padding:16px 28px 0px 28px;
-    color:hsl(212, 23%, 69%);
+    color:hsl(214, 17%, 51%);
 
 }
 .endBody{
     display:flex;
-    padding:17px 28px 0px 28px;
+    padding:19px 28px 0px 28px;
 
 }
 
@@ -57,7 +57,20 @@ img{
     height:30px;
     width: 30px;
     border-radius: 50px;
+    margin-right:19px;
+    
+}
+
+.author-name{
+    font-size:font-size: 12px;
+    font-weight:600; 
     color:hsl(217, 19%, 35%);
+    padding-right:76px;
+}
+.publish-date{
+    color:hsl(212, 23%, 69%);
+    font-size: 12px;
+
 }
 button{
     background-color:hsl(210, 46%, 95%) ;   
