@@ -1,21 +1,66 @@
 *{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', sans-serif;
     box-sizing:border-box;
+    
 }
 .main-box{
     display:flex;
     justify-content: center;
-    align-content: center;
+    align-items: center; 
+    background-color:hsl(210, 46%, 95%) ;   
+    min-height: 100vh;     
 }
+
 .bigImg{
-    height:100px;
-    width:100px;
+    height:250px;
+    width:300px;
     background-color: aqua;
+    background-image: url(drawers.jpg);
+    background-size: cover;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius:3%;
 }
 .main-Body{
-    height:100px;
-    width:100px;
-    background-color: aqua;
+    height:250px;
+    width:350px;
+    background-color: white;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+    text-align: left;
+}
+.bodyPart{
+    background-color: white;
+    
+}
+#heading{
+    font-weight :700;
+    font-size: 16px;
+    padding:29px 28px 0px 28px;
+    color:hsl(217, 19%, 35%);
 
+}
+#description{
+    font-size: 13px;
+    font-weight :500;
+    padding:16px 28px 0px 28px;
+    color:hsl(212, 23%, 69%);
+
+}
+.endBody{
+    display:flex;
+    padding:17px 28px 0px 28px;
+
+}
+
+img{
+    height:30px;
+    width: 30px;
+    border-radius: 50px;
+    color:hsl(217, 19%, 35%);
+}
+button{
+    background-color:hsl(210, 46%, 95%) ;   ;
+    color:hsl(212, 23%, 69%);;
+    border-radius: 20px;
 }
