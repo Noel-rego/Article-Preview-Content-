@@ -60,9 +60,8 @@ img{
     margin-right:19px;
     
 }
-
 .author-name{
-    font-size:font-size: 12px;
+    font-size:12px;
     font-weight:600; 
     color:hsl(217, 19%, 35%);
     padding-right:76px;
@@ -74,9 +73,37 @@ img{
 }
 button{
     background-color:hsl(210, 46%, 95%) ;   
-    color:hsl(217, 19%, 35%);;
+    color:hsl(217, 19%, 35%);
     height:25px;
     border:2px solid hsl(210, 46%, 95%);
     width:30px;
     border-radius:20px;
+}
+.share{
+         display: flex;
+         flex-direction: column;
+         position: relative; 
+         justify-content: center;
+}
+.popup-arrow {
+    width: 10px;
+    height: 10px;
+    background-color: hsl(217, 19%, 35%); 
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+   
+}
+.invisibleButtons{
+    /*display:none;*/
+}
+.invisibleButton{
+    display: flex;
+    justify-content: space-evenly;
+    object-fit: contain;
+    background-color:hsl(217, 19%, 35%) ;
+    border-radius: 10px;
+    
+}
+.share-text{
+    color:hsl(212, 23%, 69%);
+    font-size:12px;
 }
