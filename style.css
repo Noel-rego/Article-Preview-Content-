@@ -114,7 +114,7 @@ button{
     background-color: hsl(217, 19%, 35%); 
     clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
    
-}
+}/*
 @media(max-width:768px){
     
         .main-box{
@@ -130,6 +130,57 @@ button{
             border-bottom-left-radius: 3%;
             border-top-right-radius: 0%;
         }
+        .endBody{
+             background-color: hsl(217, 19%, 35%);
+             color:hsl(210, 46%, 95%);
+             margin-top: 45px;
+             border-bottom-right-radius: 3%;
+             border-bottom-left-radius: 3%;
+             display: flex;
+             width:100%;
+             justify-content: flex-end;
+             align-items: center; 
+             align-content: center;
+             
+        }
+        .popup-arrow ,.author-name ,.publish-date ,.profile {
+             display: none;
+        }
+        .share{
+            background-color: hsl(210, 46%, 95%);
+            color: hsl(214, 17%, 51%);
+            position: static;
+            border-radius: 50%;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center; 
+            align-content: center;
+            margin-bottom:12px;
+        }
+        .invisibleButtons{
+            display: flex;
+            display:none;
+            justify-content: center;
+            align-items: center;
+            padding:154px;
+            justify-content: space-evenly;
+            padding-left:20px;
+            margin-right: 0px;
+            width: 100%;
+        }
+        .invisibleButton{
+         display: flex;
+         justify-content: space-evenly;
+         object-fit: contain;
+         align-items: center;
+         border-radius: 10px;
+         transform: none; 
+         flex-direction: row;
+         background-color: transparent;  
+        }   
+    }
+*/
+   
 
 
 
@@ -137,9 +188,55 @@ button{
 
 
 
-        
-        
+
+@media(max-width: 768px) {
+    .main-box {
+        flex-direction: column;
+    }
+    
+    .bigImg {
+        width: 100%;
+        height: 200px; /* Let the image have a fixed height on mobile */
     }
 
+    /* 1. DEFAULT MOBILE STATE: White background, normal text colors */
+    .endBody {
+        background-color: white; 
+        padding: 16px 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
 
+    /* 2. CLICKED MOBILE STATE: Turns dark blue and stretches full width */
+    .endBody.show-share {
+        background-color: hsl(217, 19%, 35%);
+    }
 
+    /* 3. TOGGLE VISIBILITY BASED ON THE CLASS */
+    /* Hide the author info when the share bar is active */
+    .endBody.show-share .profile,
+    .endBody.show-share .author-info {
+        display: none;
+    }
+
+    /* Hide the share menu icons by default on mobile */
+    .invisibleButtons {
+        display: none;
+    }
+
+    /* Show the share menu icons inline inside the bar when active */
+    .endBody.show-share .invisibleButtons {
+        display: flex;
+        position: static; /* Removes absolute desktop popup positioning */
+        transform: none;  /* Removes the desktop center shift */
+        width: auto;
+        background-color: transparent;
+    }
+    
+    /* Hide the little desktop triangle arrow on mobile completely */
+    .popup-arrow {
+        display: none !important;
+    }
+}
