@@ -2,7 +2,6 @@
     margin:0;
     font-family: 'Manrope', sans-serif;
     box-sizing:border-box;
-    
 }
 .main-box{
     display:flex;
@@ -11,7 +10,6 @@
     background-color:hsl(210, 46%, 95%) ;   
     min-height: 100vh;     
 }
-
 .bigImg{
     height:250px;
     width:300px;
@@ -31,34 +29,29 @@
 }
 .bodyPart{
     background-color: white;
-    
 }
 #heading{
     font-weight :700;
     font-size: 16px;
     padding:29px 28px 0px 28px;
     color:hsl(217, 19%, 35%);
-
 }
 #description{
     font-size: 13px;
     font-weight :500;
     padding:16px 28px 0px 28px;
     color:hsl(214, 17%, 51%);
-
 }
 .endBody{
     display:flex;
     padding:19px 28px 0px 28px;
-
 }
-
 .profile{
     height:30px;
     width: 30px;
     border-radius: 50px;
     margin-right:19px;
-    
+ 
 }
 .author-name{
     font-size:12px;
@@ -71,7 +64,6 @@
     font-size: 12px;
 
 }
-
 .share{
          display: flex;
          flex-direction: column;
@@ -87,7 +79,6 @@ button{
     width:30px;
     border-radius:20px;
 }
-
 .invisibleButtons{
     display: flex;
     display:none;
@@ -111,8 +102,6 @@ button{
     padding-top: 7px; 
     padding-bottom: 5px;
     width:100%;
-
-   
 }
 .share-text{
     color:hsl(212, 23%, 69%);
@@ -126,3 +115,31 @@ button{
     clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
    
 }
+@media(max-width:768px){
+    
+        .main-box{
+            flex-direction: column;
+        }
+        .bigImg{
+            width: 350px;
+            border-top-right-radius: 3%;
+            border-bottom-left-radius: 0%;
+
+        }
+        .main-Body{
+            border-bottom-left-radius: 3%;
+            border-top-right-radius: 0%;
+        }
+
+
+
+
+
+
+
+        
+        
+    }
+
+
+
