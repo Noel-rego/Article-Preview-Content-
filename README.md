@@ -1,55 +1,6 @@
-Project Title
-Simple overview of use/purpose.
-
-Description
-An in-depth paragraph about your project and overview of use.
-
-Getting Started
-Dependencies............"Tried to learn howautomated dependency updates works...but failed ,wil try again for the next project."
-Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-ex. Windows 10
-Installing
-How/where to download your program
-Any modifications needed to be made to files/folders
-Executing program
-How to run the program
-Step-by-step bullets
-code blocks for commands
-Help
-Any advise for common problems or issues.
-
-command to run if program contains helper info
-Authors
-Contributors names and contact info
-
-ex. Dominique Pizzie
-ex. @DomPizzie
-
-Version History
-0.2
-Various bug fixes and optimizations
-See commit change or See release history
-0.1
-Initial Release
-License
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-Acknowledgments
-Inspiration, code snippets, etc.
-
-awesome-readme
-PurpleBooth
-dbader
-zenorocha
-fvcproductions
-
-
-
-
-
 # Frontend Mentor - Article preview component solution
 
-This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Article preview component challenge on Frontend Mentor](https://frontendmentor.io). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -60,13 +11,8 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [mdn,font](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -81,91 +27,67 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com](https://github.com)
+- Live Site URL: [https://github.io](https://github.io)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CSS Flexbox (for structural card layout alignments and mobile vertical stacking)
+- Custom Google Web Fonts (Manrope)
+- FontAwesome Vector Icons (v7.3.1 CDN)
+- Vanilla JavaScript (ECMAScript 6 runtime DOM manipulation)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+During this project, I learned how to handle layout positioning transitions between mobile and desktop devices. Specifically, understanding how absolute positioning calculates offsets relative to its closest relative parent container was crucial for positioning the desktop tooltip.
 
-To see how you can add code snippets, see below:
+I successfully implemented the absolute center horizontal alignment trick using `left: 50%` and `transform: translateX(-50%)`:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.invisibleButtons {
+    position: absolute;
+    bottom: 40px;
+    left: 50%; 
+    transform: translateX(-50%); /* Shifts the popover back by exactly half of its own dynamic width */
+    z-index: 10; 
 }
 ```
+
+I also learned how to leverage an active toggle utility class to re-engineer layout hierarchies under mobile breakpoints. By listening to the client window width dynamically at runtime, a single click event manages both desktop popups and full mobile active section rewrites:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+button.addEventListener("click", () => {
+    let screenWidth = window.innerWidth; 
+    if (screenWidth <= 768) {
+        // Toggles mobile UI state and modifies layout structure
+        endBody.classList.toggle("active");
+        console.log("device is in mobile view, button was clicked.");
+    } else {
+        // Operates a standard desktop click lifecycle chain
+        clickCount++;
+        if (clickCount === 1) {
+            invisibleButtons.style.display = "flex";
+        } else if (clickCount === 2) {
+            invisibleButtons.style.display = "none";
+            clickCount = 0;
+        }
+    }
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+I collaborated with an AI assistant to streamline the design layout and structure of this project documentation.
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- **Tools Used:** ChatGPT 
+- **How I Used It:** I used the assistant to refine my media query logic layout, document code structures, and analyze exactly how CSS layouts morph when the `.active` mobile state class changes.
+- **What Worked Well:** The assistant gave me an excellent breakdown of absolute transform mechanics and perfectly populated my project specifications right into this official Frontend Mentor markdown template schema.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@Noel-rego](https://frontendmentor.io)
