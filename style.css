@@ -203,30 +203,45 @@ button{
         .active .profile,.active .author-name,.active .publish-date,.active .popup-arrow{
             display:none;
         }
-        .active .endBody{
+        .endBody.active{
+            display:flex;
             background-color: hsl(217, 19%, 35%);
+            border-bottom-left-radius: 3%;
+            border-bottom-right-radius: 3%;
+            width:100%;
+            padding: 16px 28px; 
+        margin-top: 15px; 
+        justify-content: space-between; 
+        align-items: center;
         }
         .active .share{
             display: flex;
+            justify-content: end;
+            margin-left:20px;
+            padding-right: 15px;
+            position:static;
+            flex-direction: row;
         }
         .active .invisibleButtons{
             display: flex;
-            position:absolute;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width:100%;
+            position:static;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width:150px;
+            padding-left: 0px;
+         
         
         }
         .active .invisibleButton{
             display: flex;
             justify-content: space-evenly;
             object-fit: contain;
-            background-color:hsl(217, 19%, 35%);
-            align-items: center;
+            background-color:hsl(217, 19%, 35%);;
+            color:aliceblue;
             border-radius: 10px;
-            padding-top: 7px; 
-            padding-bottom: 5px;
-            width:100%;
+            gap:20px;
+            
+            
+          
 }
 }
